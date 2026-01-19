@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "students",
+  "collectionName": "teachers",
   "info": {
-    "singularName": "student",
-    "pluralName": "students",
-    "displayName": "Student"
+    "singularName": "teacher",
+    "pluralName": "teachers",
+    "displayName": "Teacher"
   },
   "options": {
     "draftAndPublish": true
@@ -12,31 +12,25 @@
   "pluginOptions": {},
   "attributes": {
     "Name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "Sex": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "Male",
-        "Female"
-      ]
+    "Title": {
+      "type": "string"
     },
     "Photo": {
       "type": "string"
     },
-    "location": {
+    "Subject": {
       "type": "string"
-    },
-    "Birthday": {
-      "type": "date"
     },
     "Phone": {
       "type": "biginteger"
     },
-    "Email": {
-      "type": "email"
+    "TeachFrom": {
+      "type": "date"
+    },
+    "TeachTo": {
+      "type": "date"
     },
     "Introduction": {
       "type": "customField",

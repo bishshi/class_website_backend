@@ -19,11 +19,14 @@
       "type": "text"
     },
     "content": {
-      "type": "blocks",
-      "required": true
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
     },
     "cover": {
-      "type": "text",
+      "type": "string",
       "required": true
     },
     "category": {
