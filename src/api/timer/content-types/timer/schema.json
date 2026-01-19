@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timers",
+  "info": {
+    "singularName": "timer",
+    "pluralName": "timers",
+    "displayName": "Timer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "targetTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "isSpecial": {
+      "type": "boolean",
+      "default": true
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

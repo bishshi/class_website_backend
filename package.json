@@ -15,10 +15,16 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^6.0.3",
+    "@localazy/strapi-plugin": "^1.0.8",
+    "@strapi-community/plugin-seo": "^2.1.1",
     "@strapi/plugin-cloud": "5.33.3",
+    "@strapi/plugin-documentation": "^5.33.3",
+    "@strapi/plugin-graphql": "^5.33.3",
     "@strapi/plugin-users-permissions": "5.33.3",
     "@strapi/strapi": "5.33.3",
     "better-sqlite3": "12.4.1",
+    "mysql2": "^3.16.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",

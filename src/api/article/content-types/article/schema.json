@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "text"
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
+    },
+    "cover": {
+      "type": "text",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Event",
+      "enum": [
+        "Teacher",
+        "Student",
+        "Event",
+        "SpecialEvent"
+      ]
+    }
+  }
+}
