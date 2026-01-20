@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-19T08:29:12.151Z"
+    "x-generation-date": "2026-01-20T09:43:45.980Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -4535,13 +4535,15 @@
           "data": {
             "required": [
               "title",
-              "cover",
               "category"
             ],
             "type": "object",
             "properties": {
               "title": {
                 "type": "string"
+              },
+              "isTop": {
+                "type": "boolean"
               },
               "summary": {
                 "type": "string"
@@ -4621,7 +4623,6 @@
         "type": "object",
         "required": [
           "title",
-          "cover",
           "category"
         ],
         "properties": {
@@ -4640,6 +4641,9 @@
           },
           "title": {
             "type": "string"
+          },
+          "isTop": {
+            "type": "boolean"
           },
           "summary": {
             "type": "string"
@@ -5073,6 +5077,9 @@
                 },
                 "title": {
                   "type": "string"
+                },
+                "isTop": {
+                  "type": "boolean"
                 },
                 "summary": {
                   "type": "string"
@@ -5804,6 +5811,9 @@
               "title": {
                 "type": "string"
               },
+              "isShow": {
+                "type": "boolean"
+              },
               "image": {
                 "type": "string"
               },
@@ -5892,6 +5902,9 @@
           },
           "title": {
             "type": "string"
+          },
+          "isShow": {
+            "type": "boolean"
           },
           "image": {
             "type": "string"
@@ -6316,6 +6329,9 @@
                 },
                 "title": {
                   "type": "string"
+                },
+                "isShow": {
+                  "type": "boolean"
                 },
                 "image": {
                   "type": "string"

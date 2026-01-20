@@ -15,6 +15,10 @@
       "type": "string",
       "required": true
     },
+    "isShow": {
+      "type": "boolean",
+      "default": true
+    },
     "image": {
       "type": "text",
       "required": true
