@@ -39,12 +39,12 @@ module.exports = {
         
         // 要缓存的内容类型列表
         contentTypes: [
-          "api::articles.articles",
-          "api::students.students",
-          "api::teachers.teachers",
-          "api::slides.slides",
-          "api::notices.notices",
-          "api::timers.timers",
+          "api::article.article",
+          "api::student.student",
+          "api::teacher.teacher",
+          "api::slide.slide",
+          "api::notice.notice",
+          "api::timer.timer",
         ],
       },
     },
