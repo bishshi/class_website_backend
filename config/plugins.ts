@@ -1,4 +1,8 @@
 module.exports = {
+  // 1. 你的 CKEditor 配置 (找回丢失的部分)
+  'ckeditor5': {
+    enabled: true,
+  },
   // 1. Redis 插件配置 (来自第一段代码)
   redis: {
     config: {
