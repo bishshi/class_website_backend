@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-22T00:27:02.425Z"
+    "x-generation-date": "2026-01-22T08:05:15.266Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -4542,6 +4542,15 @@
               "title": {
                 "type": "string"
               },
+              "category": {
+                "type": "string",
+                "enum": [
+                  "Teacher",
+                  "Student",
+                  "Event",
+                  "SpecialEvent"
+                ]
+              },
               "isTop": {
                 "type": "boolean"
               },
@@ -4554,14 +4563,8 @@
               "cover": {
                 "type": "string"
               },
-              "category": {
-                "type": "string",
-                "enum": [
-                  "Teacher",
-                  "Student",
-                  "Event",
-                  "SpecialEvent"
-                ]
+              "relatedPerson": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -4642,6 +4645,15 @@
           "title": {
             "type": "string"
           },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Teacher",
+              "Student",
+              "Event",
+              "SpecialEvent"
+            ]
+          },
           "isTop": {
             "type": "boolean"
           },
@@ -4654,14 +4666,8 @@
           "cover": {
             "type": "string"
           },
-          "category": {
-            "type": "string",
-            "enum": [
-              "Teacher",
-              "Student",
-              "Event",
-              "SpecialEvent"
-            ]
+          "relatedPerson": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -5078,6 +5084,15 @@
                 "title": {
                   "type": "string"
                 },
+                "category": {
+                  "type": "string",
+                  "enum": [
+                    "Teacher",
+                    "Student",
+                    "Event",
+                    "SpecialEvent"
+                  ]
+                },
                 "isTop": {
                   "type": "boolean"
                 },
@@ -5090,14 +5105,8 @@
                 "cover": {
                   "type": "string"
                 },
-                "category": {
-                  "type": "string",
-                  "enum": [
-                    "Teacher",
-                    "Student",
-                    "Event",
-                    "SpecialEvent"
-                  ]
+                "relatedPerson": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",
@@ -6475,6 +6484,9 @@
               "Introduction": {
                 "type": "string"
               },
+              "relatedArticle": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -6581,6 +6593,9 @@
             "format": "email"
           },
           "Introduction": {
+            "type": "string"
+          },
+          "relatedArticle": {
             "type": "string"
           },
           "createdAt": {
@@ -7027,6 +7042,9 @@
                 "Introduction": {
                   "type": "string"
                 },
+                "relatedArticle": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -7152,6 +7170,9 @@
               "Introduction": {
                 "type": "string"
               },
+              "relatedArticle": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -7250,6 +7271,9 @@
             "format": "date"
           },
           "Introduction": {
+            "type": "string"
+          },
+          "relatedArticle": {
             "type": "string"
           },
           "createdAt": {
@@ -7690,6 +7714,9 @@
                   "format": "date"
                 },
                 "Introduction": {
+                  "type": "string"
+                },
+                "relatedArticle": {
                   "type": "string"
                 },
                 "createdAt": {

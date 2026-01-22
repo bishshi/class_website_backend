@@ -465,6 +465,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    relatedPerson: Schema.Attribute.Text;
     summary: Schema.Attribute.Text;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -575,6 +576,7 @@ export interface ApiStudentStudent extends Struct.CollectionTypeSchema {
     Phone: Schema.Attribute.BigInteger;
     Photo: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    relatedArticle: Schema.Attribute.Text;
     Sex: Schema.Attribute.Enumeration<['Male', 'Female']> &
       Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -614,6 +616,7 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
     Phone: Schema.Attribute.BigInteger;
     Photo: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    relatedArticle: Schema.Attribute.Text;
     Subject: Schema.Attribute.String;
     TeachFrom: Schema.Attribute.Date;
     TeachTo: Schema.Attribute.Date;

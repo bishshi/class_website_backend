@@ -38,6 +38,9 @@
       "options": {
         "preset": "defaultMarkdown"
       }
+    },
+    "relatedArticle": {
+      "type": "text"
     }
   }
 }
