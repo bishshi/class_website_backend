@@ -1,7 +1,5 @@
-export default () => ({});
-module.exports = ({ env }) => ({
-  // ... 其他插件
-  
+// config/plugins.ts
+export default ({ env }) => ({
   'rest-cache': {
     config: {
       provider: {
@@ -19,13 +17,14 @@ module.exports = ({ env }) => ({
         },
       },
       strategy: {
-        // 开启调试 Header，方便你在浏览器 Network 面板看到 X-Cache-Hit
         enableXCacheHeaders: true,
         contentTypes: [
-          // 这里添加你想缓存的 Collection Type
-          // 格式：'api::api-name.content-type-name'
-          'api::article.article', 
-          'api::category.category',
+          'api::articles.articles',
+          'api::students.students',
+          'api::teachers.teachers',
+          'api::slides.slides',
+          'api::notices.notices',
+          'api::timers.timers',
         ],
       },
     },
