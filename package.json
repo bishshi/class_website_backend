@@ -29,6 +29,8 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "strapi-plugin-publisher": "^2.0.5",
+    "strapi-plugin-reactions": "^2.2.0",
+    "strapi-plugin-webtools": "^0.0.0",
     "styled-components": "^6.0.0",
     "webtools-addon-sitemap": "^0.0.0"
   },

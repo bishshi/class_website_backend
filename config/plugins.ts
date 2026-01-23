@@ -1,5 +1,32 @@
 module.exports = ({ env }) => ({
-  // ..
+  graphql: {
+    enabled: true,
+    config: {
+      endpoint: '/graphql',
+      shadowCRUD: true,
+      
+      depthLimit: 7,
+      amountLimit: 100,
+      
+      apolloServer: {
+        // 生产环境关闭追踪
+        tracing: env.bool('GRAPHQL_TRACING', false),
+        
+        // 生产环境必须关闭 Introspection (防止 Schema 泄露)
+        introspection: env.bool('NODE_ENV') !== 'production', 
+      },
+      landingPage: env('NODE_ENV') !== 'production', 
+    },
+  },
+
+  reactions: {
+    enabled: true,
+    config: {
+      gql: {
+        reactionRelated: ['Article', 'Student', 'Teacher'],
+      },
+    },
+  },
 	'publisher': {
 		enabled: true,
 		config: {

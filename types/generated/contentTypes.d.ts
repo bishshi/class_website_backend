@@ -1053,6 +1053,109 @@ export interface PluginPublisherAction extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface PluginReactionsReaction extends Struct.CollectionTypeSchema {
+  collectionName: 'vl_reactions';
+  info: {
+    description: 'Reactions per Content Type';
+    displayName: 'Reactions';
+    name: 'Reaction';
+    pluralName: 'reactions';
+    singularName: 'reaction';
+  };
+  options: {
+    draftAndPublish: false;
+    privateAttributes: ['relatedUid'];
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: true;
+    };
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    kind: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::reactions.reaction-type'
+    > &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'plugin::reactions.reaction'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    related: Schema.Attribute.Relation<'morphToMany'> &
+      Schema.Attribute.Required;
+    relatedUid: Schema.Attribute.Text & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+    userId: Schema.Attribute.String;
+  };
+}
+
+export interface PluginReactionsReactionType
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'vl_reactions_types';
+  info: {
+    description: 'Type of Reaction';
+    displayName: 'Reaction Type';
+    name: 'Reaction Type';
+    pluralName: 'reaction-types';
+    singularName: 'reaction-type';
+  };
+  options: {
+    draftAndPublish: false;
+    privateAttributes: ['createdAt', 'updatedAt'];
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    emoji: Schema.Attribute.Text;
+    emojiFallbackUrl: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'plugin::reactions.reaction-type'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.Text & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    reactions: Schema.Attribute.Relation<
+      'oneToMany',
+      'plugin::reactions.reaction'
+    >;
+    slug: Schema.Attribute.UID &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginReviewWorkflowsWorkflow
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_workflows';
@@ -1434,6 +1537,8 @@ declare module '@strapi/strapi' {
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::publisher.action': PluginPublisherAction;
+      'plugin::reactions.reaction': PluginReactionsReaction;
+      'plugin::reactions.reaction-type': PluginReactionsReactionType;
       'plugin::review-workflows.workflow': PluginReviewWorkflowsWorkflow;
       'plugin::review-workflows.workflow-stage': PluginReviewWorkflowsWorkflowStage;
       'plugin::upload.file': PluginUploadFile;
