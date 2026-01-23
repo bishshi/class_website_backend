@@ -1,6 +1,6 @@
 {
   "name": "my-class-backend",
-  "version": "1.1.0",
+  "version": "1.5.0",
   "private": true,
   "description": "A Strapi application",
   "scripts": {
@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^6.0.3",
-    "@localazy/strapi-plugin": "^1.0.8",
     "@strapi-community/plugin-seo": "^2.1.1",
     "@strapi/plugin-cloud": "5.33.4",
     "@strapi/plugin-documentation": "^5.33.4",
@@ -29,7 +28,9 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "strapi-plugin-publisher": "^2.0.5",
+    "styled-components": "^6.0.0",
+    "webtools-addon-sitemap": "^0.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
