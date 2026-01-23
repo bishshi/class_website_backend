@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-
+  
   reactions: {
     enabled: true,
     config: {
@@ -25,7 +25,7 @@ module.exports = ({ env }) => ({
         // 生产环境必须关闭 Introspection (防止 Schema 泄露)
         introspection: env.bool('NODE_ENV') !== 'production', 
       },
-      landingPage: true, 
+      landingPage: env('NODE_ENV') !== 'production', 
     },
   },
 
