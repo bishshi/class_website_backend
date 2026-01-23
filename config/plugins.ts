@@ -1,5 +1,15 @@
 module.exports = ({ env }) => ({
-  graphql: {
+
+  reactions: {
+    enabled: true,
+    config: {
+      gql: {
+        reactionRelated: ['Article', 'Student', 'Teacher'],
+      },
+    },
+  },
+  
+    graphql: {
     enabled: true,
     config: {
       endpoint: '/graphql',
@@ -15,18 +25,11 @@ module.exports = ({ env }) => ({
         // 生产环境必须关闭 Introspection (防止 Schema 泄露)
         introspection: env.bool('NODE_ENV') !== 'production', 
       },
-      landingPage: env('NODE_ENV') !== 'production', 
+      landingPage: true, 
     },
   },
 
-  reactions: {
-    enabled: true,
-    config: {
-      gql: {
-        reactionRelated: ['Article', 'Student', 'Teacher'],
-      },
-    },
-  },
+
 	'publisher': {
 		enabled: true,
 		config: {
