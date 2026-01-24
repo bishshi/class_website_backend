@@ -30,6 +30,7 @@ export default [
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
+  'global::turnstile',
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
