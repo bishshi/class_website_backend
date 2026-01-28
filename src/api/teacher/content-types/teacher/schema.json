@@ -90,6 +90,14 @@
           "localized": false
         }
       }
+    },
+    "Stars": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
